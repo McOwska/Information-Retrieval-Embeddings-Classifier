@@ -5,6 +5,7 @@ colorFrom: indigo
 colorTo: blue
 sdk: gradio
 sdk_version: 4.0.0
+python_version: "3.12"
 app_file: app.py
 pinned: false
 ---
@@ -18,4 +19,3 @@ This Space loads the model from `McOwska/action-requirement-classifier` and pred
 - `optional_action`
 
 You can override which model repo to load using the `MODEL_REPO_ID` environment variable.
-
