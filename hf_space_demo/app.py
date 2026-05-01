@@ -42,13 +42,11 @@ def predict(text: str):
 demo = gr.Interface(
     fn=predict,
     inputs=gr.Textbox(lines=6, label="Text"),
-    outputs=gr.Label(label="Predicted label"),
+    outputs=gr.Textbox(label="Predicted label"),
     title="Action Requirement Classifier",
     description=f"Loads model artifacts from `{MODEL_REPO_ID}`.",
-    allow_flagging="never",
 )
 
 
 if __name__ == "__main__":
     demo.launch()
-
