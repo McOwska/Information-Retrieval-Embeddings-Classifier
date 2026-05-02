@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Large artifacts already uploaded to Hugging Face
+best_model_bundle/
