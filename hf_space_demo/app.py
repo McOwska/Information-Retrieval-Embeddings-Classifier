@@ -43,6 +43,13 @@ demo = gr.Interface(
     fn=predict,
     inputs=gr.Textbox(lines=6, label="Text"),
     outputs=gr.Textbox(label="Predicted label"),
+    examples=[
+        ["Please upload a clearer photo of your ID."],
+        ["Your booking is confirmed."],
+        ["You might want to compare the available plans before deciding."],
+        ["The deadline for this process is June 15."],
+        ["Please provide clarification on the highlighted question."],
+    ],
     title="Action Requirement Classifier",
     description=f"Loads model artifacts from `{MODEL_REPO_ID}`.",
 )
