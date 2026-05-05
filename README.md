@@ -11,7 +11,7 @@ It predicts one of:
 ## Repository contents
 
 - `train.py` — trains multiple classifiers on sentence embeddings, selects the best by macro-F1, and saves a bundle
-- `dataset_hard_100.csv` — 100-row dataset used for the current demo/model
+- `dataset_hard_100.csv` — legacy/local CSV (same schema) used earlier
 - `dataset_hard_300.csv`, `dataset_300.csv`, `instruction_action_dataset.csv` — additional datasets
 - `hf_space_demo/` — Hugging Face Space (Gradio) demo that loads the model from the Hub
 
@@ -24,11 +24,26 @@ It predicts one of:
 
 ## Train locally
 
-Create a virtualenv, then:
+Create a virtualenv, install deps, then:
 
 ```bash
 python train.py
 ```
+
+By default, `train.py` reads the dataset directly from Hugging Face:
+
+- Dataset: `McOwska/action-required-text-classification` (split `train`)
+
+If you prefer a local CSV:
+
+```bash
+python train.py --csv dataset_hard_100.csv
+```
+
+Notes:
+
+- Loading from Hugging Face requires the `datasets` package (`pip install datasets`).
+- You can choose a specific split with `--hf-split` (defaults to `train` when available).
 
 This creates a local folder `best_model_bundle/` containing:
 
@@ -42,5 +57,4 @@ Note: `best_model_bundle/` is intentionally ignored by git (large artifacts). Th
 
 - Model repo: `McOwska/action-requirement-classifier`
 - Demo Space: `McOwska/action-requirement-classifier-demo`
-
 
