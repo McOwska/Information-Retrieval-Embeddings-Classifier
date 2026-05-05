@@ -50,6 +50,7 @@ Note: `best_model_bundle/` is intentionally ignored by git (large artifacts). Th
 
 ## Hugging Face
 
+- Dataset: `McOwska/action-required-text-classification`
 - Model repo: `McOwska/action-requirement-classifier`
 - Demo Space: `McOwska/action-requirement-classifier-demo`
 
