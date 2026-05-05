@@ -43,17 +43,4 @@ Note: `best_model_bundle/` is intentionally ignored by git (large artifacts). Th
 - Model repo: `McOwska/action-requirement-classifier`
 - Demo Space: `McOwska/action-requirement-classifier-demo`
 
-## Quick inference (from a local bundle)
-
-```python
-import joblib
-from sentence_transformers import SentenceTransformer
-
-encoder = SentenceTransformer("best_model_bundle/encoder")
-clf = joblib.load("best_model_bundle/classifier.joblib")
-
-texts = ["Please upload a clearer photo of your ID."]
-emb = encoder.encode(texts)
-print(clf.predict(emb)[0])
-```
 
