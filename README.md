@@ -40,11 +40,6 @@ If you prefer a local CSV:
 python train.py --csv dataset_hard_100.csv
 ```
 
-Notes:
-
-- Loading from Hugging Face requires the `datasets` package (`pip install datasets`).
-- You can choose a specific split with `--hf-split` (defaults to `train` when available).
-
 This creates a local folder `best_model_bundle/` containing:
 
 - `classifier.joblib`
