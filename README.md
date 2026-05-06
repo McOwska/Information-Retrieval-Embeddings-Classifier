@@ -12,8 +12,6 @@ It predicts one of:
 
 - `Classifying_Action_Requirements_in_Short_Text_Messages_Using_Sentence_Embeddings.pdf` - detailed description of the project
 - `train.py` — trains multiple classifiers on sentence embeddings, selects the best by macro-F1, and saves a bundle
-- `dataset_hard_100.csv` — legacy/local CSV (same schema) used earlier
-- `dataset_hard_300.csv`, `dataset_300.csv`, `instruction_action_dataset.csv` — additional datasets
 - `hf_space_demo/` — Hugging Face Space (Gradio) demo that loads the model from the Hub
 
 ## How it works
